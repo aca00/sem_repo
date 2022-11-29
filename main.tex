@@ -1,0 +1,49 @@
+\documentclass{report}
+
+% PACKAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage[justification=centering]{caption} % All captions will be centered. 
+\usepackage{url} % To include in URL in reference. 
+\usepackage[nottoc]{tocbibind} %Includes "References" in the table of contents
+
+% VARIABLES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\cTitle{LEARNING FROM ACCIDENTS: MACHINE LEARNING FOR SAFETY AT RAILWAY STATIONS}
+\newcommand\cName{AKHIL C A}
+\newcommand\cRegNo{LPKD19IT063}
+\newcommand\cGuide{Mr. EBEY S RAJ}
+\newcommand\cHod{Dr. SANGEETHA UNNIKRISHNAN}
+
+
+\begin{document}
+
+% COVER PAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{covers/_cover1}
+\include{covers/_cover2}
+\include{covers/declaration}
+\include{covers/certificate}
+\include{covers/toc}
+
+\pagenumbering{Roman} % Roman numbers for cover pages.
+\include{covers/acknoledgement}
+\include{covers/abstract}
+\include{covers/lot} % List of tables
+\include{covers/lof} % List of figures
+\pagenumbering{arabic} % Arabic numbers for contents
+
+% CHAPTERS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{chapters/introduction}
+\include{chapters/data_preparation}
+\include{chapters/decision_tree_method}
+\include{chapters/results}
+\include{chapters/conclusion}
+
+% APPENDICES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\appendix  
+
+% BIBLIOGRAPHY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\bibname}{References}
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}

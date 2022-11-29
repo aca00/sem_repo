@@ -1,0 +1,65 @@
+\chapter{Data preparation}
+An essential step in the data analysis process is data preparation. This is significant since it might affect the outcome. Data gathered from RSSB reports since 2002 is used in this study. Eighty accidents were chosen for analysis, and accidents without certain details were left out. Some modifications are made to fit the data structure to fit the modelling process, this include;
+
+\begin{enumerate}
+    \item Generalization
+    \item Designing highlights
+    \item Transforming data 
+    \item Reducing or removing redundant features
+\end{enumerate}
+
+
+\section{Generalization}
+For example the date of accident field in the accident documents which consists of year, month and the day is amended to contain the specific day of the week (D-1 Saturday, D-2 Sunday etc.) and particular time such as AM or PM. See table \ref{tab:generalization}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{l|l}
+         Before &  Electric shock at station, Fatal, 11/04/2015, 15:05:00, 28, G-M\\
+         \hline 
+         After & Electric shock at station, Fatal, D-1, PM, 28, G-M
+    \end{tabular}
+    \caption{Generalization}
+    \label{tab:generalization}
+\end{table}
+
+\section{Designing highlights}
+From the cause of each accident, a distinct feature is created. For example,
+
+\begin{itemize}
+    \item T1-F: Falling from platform and struck by train. 
+    \item T2-E: Electrical shock. 
+    \item T3-S: Struck by a moving train. 
+\end{itemize}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{l|l}
+         Before &  Electric shock at station, Fatal, D-1, PM, 28, G-M\\
+         \hline 
+         After & T2-E, Fatal, D-1, PM, 28, G-M
+    \end{tabular}
+    \caption{Designing highlights}
+    \label{tab:highlights}
+\end{table}
+
+\section{Transforming data}
+The set of values is consistent with a new set of feature values. For example the day of the accident , age and gender of the person are converted into discrete values. 
+
+\section{Removing redundant features}
+Features that are inappropriate for study are eliminated. For example,
+\begin{itemize}
+    \item Accidents occurring out of stations. 
+    \item Accidents not having details of the person who was involved. 
+\end{itemize}
+
+\section{Summary of data preparation}
+By preparing and cleaning the data, the number of accidents is reduced to 71 instances with five variables, resulting in fatalities at the train station boundaries. Now the dataset contains the following attributes: 
+
+\begin{itemize}
+    \item Age (eg: 23,24 etc.)
+    \item Sex  (eg: G-M for male, G-F for female.)
+    \item Day of the week (eg: D-1 for Saturday, D-2 for Sunday and so on.)
+    \item Time of the event (eg: AM or PM)
+    \item Cause of death (eg: T1-F: Falling from platform, T2-E: Electrical shock etc.)
+\end{itemize}
